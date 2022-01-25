@@ -1,19 +1,17 @@
 /*Gmaps*/
 
 .mapouter {
+    @include medidas(600px , 700px);
     margin: 25px auto;
-    height: 600px;
-    width: 700px;
     display: flex;
 
 
         .gmap_canvas {
+            @include medidas(600px , 700px);
             display: flex;
             float: left;
             overflow: hidden;
             background: none !important;
-            height: 600px;
-            width: 700px;
             justify-content: center;
         }
 }
