@@ -3,102 +3,23 @@
 * {
     padding: 0;
     margin: 0;
-
 }
-@mixin medidas ($height,$width){
+
+@mixin medidas ($height, $width) {
 
     height: $height;
     width: $width;
 
 }
 
-.bg-dark {
-
-    .container-fluid {
-        margin-bottom: 25px;
-        margin-top: 25px;
-
-        a:hover {
-            background: black;
-            border-radius: 5px;
-            color: white;
-            transition: box-shadow .3s;
-        }
-    }
-}
-
-.logo_header {
-    @include medidas(85.5px , 350px);
-}
-
-.carousel {
-    position: relative;
-    margin-block: 150px;
-    margin-left: 150px;
-    margin-right: 150px;
-}
-
-.form-control {
-    width: 350px;
-}
-
-.navbar-collapse {
-    font-size: x-large;
-}
-
 
 body {
-    @include medidas(100%,100%);
+    @include medidas(100%, 100%);
     background-image: url(../imagenes/descargar.jpg);
     background-color: white;
     background-repeat: no-repeat;
     background-size: cover;
 }
-
-
-
-/*Texto de la página F.A.Q*/
-.contenedorgrid {
-    @include medidas(50% , 100%);
-    justify-content: center;
-    display: grid;
-    margin-bottom: 5%;
-    margin-top: 5%;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-    grid-template-areas:
-        "boxmodel1 boxmodel2"
-}
-
-.boxmodel1 {
-    @extend .boxmodel1;
-    margin-left: 15px;
-    grid-area: boxmodel1;
-}
-
-.boxmodel2 {
-    @extend .boxmodel2;
-    margin-right: 15px;
-    grid-area: boxmodel2;
-}
-
-h1.titulo {
-    text-align: center;
-    color: white;
-}
-
-/*Texto de la página contacto*/
-.contacto {
-    margin-top: 5%;
-    margin-left: 1%;
-    font-family: "Montserrat", sans-serif;
-    font-size: 150%;
-    color: white;
-}
-
-/*Estilos al pasar el mouse sobre los menues*/
-
-
 
 
 
@@ -108,71 +29,31 @@ a {
     padding: 5px;
 }
 
-.text-uppercase {
-    text-transform: uppercase !important;
-    color: blueviolet;
-    font-size: x-large;
-    margin-left: 35px;
-}
-
-p {
-    margin-top: 0;
-    margin-bottom: 1rem;
-    margin-left: 35px;
-    text-align: center;
-    color: white;
-}
-
-ul {
-    margin-left: 35px;
-
-}
-
-
-
-.menu {
-    margin-bottom: 2px;
-
-
-    ul {
-
-        font-size: 30px;
-        font-family: "Montserrat", sans-serif;
-        text-align: center;
-        display: flex;
-        flex-wrap: wrap;
-        list-style: none;
-        text-transform: uppercase;
-        justify-content: center;
-        margin-top: 15%;
-        padding-bottom: 1%;
-
-        li {
-            display: inline-block;
-            padding: 10px;
-        }
-    }
-}
-
-.pt-4 {
-    padding-top: 1.5rem !important;
-    background-color: #212529;
-}
-
-
-    
-
-
-
+@import "_faq";
 @import "_footer";
 @import "_mapa";
-
+@import "_tarjetas";
+@import "_imagenesfooter";
+@import "_header";
+@import "_contacto";
+@import "carousel";
 
 @media only screen and (max-width:700px) {
+    .list-inline-item img {
 
+        width: 75px;
+        height: 75px;
+    }
+
+    .carousel {
+        position: relative;
+        margin-block: 15%;
+        margin-left: 15%;
+        margin-right: 15%;
+    }
 
     .contenedorgrid {
-        @include medidas(100% , 100%);
+        @include medidas(100%, 100%);
         display: grid;
         text-align: justify;
         margin-top: 0%;
@@ -185,11 +66,11 @@ ul {
     }
 
     .boxmodel1 {
-    color: red;
+        color: red;
     }
 
     .boxmodel2 {
-    color:blue;
+        color: blue;
     }
 
     h1.titulo {
@@ -204,15 +85,26 @@ ul {
 }
 
 @media only screen and (min-width:701px) and (max-width:1080px) {
-
     body {
-        @include medidas(100% , 100%);
+        @include medidas(100%, 100%);
         background-size: cover;
     }
 
+    .list-inline-item img {
+
+        width: 100px;
+        height: 100px;
+    }
+
+    .carousel {
+        position: relative;
+        margin-block: 15%;
+        margin-left: 15%;
+        margin-right: 15%;
+    }
 
     .contenedorgrid {
-        @include medidas(100% , 100%);
+        @include medidas(100%, 100%);
         display: grid;
         text-align: justify;
         margin-top: 0%;

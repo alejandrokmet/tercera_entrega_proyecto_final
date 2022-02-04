@@ -5,37 +5,6 @@
   margin: 0;
 }
 
-.bg-dark .container-fluid {
-  margin-bottom: 25px;
-  margin-top: 25px;
-}
-.bg-dark .container-fluid a:hover {
-  background: black;
-  border-radius: 5px;
-  color: white;
-  transition: box-shadow 0.3s;
-}
-
-.logo_header {
-  height: 85.5px;
-  width: 350px;
-}
-
-.carousel {
-  position: relative;
-  margin-block: 150px;
-  margin-left: 150px;
-  margin-right: 150px;
-}
-
-.form-control {
-  width: 350px;
-}
-
-.navbar-collapse {
-  font-size: x-large;
-}
-
 body {
   height: 100%;
   width: 100%;
@@ -43,6 +12,12 @@ body {
   background-color: white;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  padding: 5px;
 }
 
 /*Texto de la página F.A.Q*/
@@ -56,6 +31,13 @@ body {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
   grid-template-areas: "boxmodel1 boxmodel2";
+}
+.contenedorgrid p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  margin-left: 35px;
+  text-align: center;
+  color: white;
 }
 
 .boxmodel1 {
@@ -73,66 +55,6 @@ h1.titulo {
   color: white;
 }
 
-/*Texto de la página contacto*/
-.contacto {
-  margin-top: 5%;
-  margin-left: 1%;
-  font-family: "Montserrat", sans-serif;
-  font-size: 150%;
-  color: white;
-}
-
-/*Estilos al pasar el mouse sobre los menues*/
-a {
-  text-decoration: none;
-  color: white;
-  padding: 5px;
-}
-
-.text-uppercase {
-  text-transform: uppercase !important;
-  color: blueviolet;
-  font-size: x-large;
-  margin-left: 35px;
-}
-
-p {
-  margin-top: 0;
-  margin-bottom: 1rem;
-  margin-left: 35px;
-  text-align: center;
-  color: white;
-}
-
-ul {
-  margin-left: 35px;
-}
-
-.menu {
-  margin-bottom: 2px;
-}
-.menu ul {
-  font-size: 30px;
-  font-family: "Montserrat", sans-serif;
-  text-align: center;
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
-  text-transform: uppercase;
-  justify-content: center;
-  margin-top: 15%;
-  padding-bottom: 1%;
-}
-.menu ul li {
-  display: inline-block;
-  padding: 10px;
-}
-
-.pt-4 {
-  padding-top: 1.5rem !important;
-  background-color: #212529;
-}
-
 .linkfooter {
   background-color: #212529;
 }
@@ -142,6 +64,13 @@ ul {
   transition: 0, 5s;
   border-radius: 5px;
   color: white;
+}
+
+.text-uppercase {
+  text-transform: uppercase !important;
+  color: red;
+  font-size: x-large;
+  margin-left: 35px;
 }
 
 /*Gmaps*/
@@ -161,7 +90,225 @@ ul {
   justify-content: center;
 }
 
+h3 {
+  text-align: center;
+  font-size: 20px;
+  margin: 0;
+  padding-top: 10px;
+  color: red;
+  margin-bottom: 5%;
+}
+
+.galeria {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  margin: 50px 0;
+}
+.galeria a {
+  text-decoration: none;
+}
+
+.contenido {
+  width: 20%;
+  margin: 15px;
+  box-sizing: border-box;
+  float: left;
+  text-align: center;
+  border-radius: 20px;
+  cursor: pointer;
+  padding-top: 10px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  transition: 0.4s;
+  background: #212529;
+}
+.contenido img {
+  width: 200px;
+  height: 200px;
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+}
+
+.contenido:hover {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  transform: translate(0px, -8px);
+}
+
+.contenido p {
+  text-align: center;
+  color: white;
+  padding-top: 0 8px;
+}
+
+h6 {
+  font-size: 26px;
+  text-align: center;
+  color: white;
+  margin: 0;
+}
+
+.contenido ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+.contenido ul li {
+  padding: 5px;
+}
+
+.fa {
+  font-size: 26px;
+  transition: 0.4s;
+  margin: 3px;
+  color: black;
+}
+
+.fa:hover {
+  transform: scale(1.3);
+  transition: 0.6s;
+}
+
+.checked {
+  color: orange;
+}
+
+.boton {
+  text-align: center;
+  font-size: 24px;
+  color: red;
+  font-weight: bold;
+  width: 100%;
+  padding: 10px;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  margin-top: 5px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  background: yellow;
+  justify-content: flex-end;
+}
+
+@media (max-width: 1000px) {
+  .contenido {
+    width: 45%;
+  }
+}
+@media (max-width: 750px) {
+  .contenido {
+    width: 100%;
+  }
+}
+.pt-4 {
+  padding-top: 1.5rem !important;
+  background-color: #212529;
+}
+
+.list-inline-item:hover {
+  opacity: 1;
+  -webkit-animation: flash 1.5s;
+  animation: flash 1.5s;
+}
+
+.hover13 figure:hover img {
+  opacity: 1;
+  -webkit-animation: flash 1.5s;
+  animation: flash 1.5s;
+}
+
+@-webkit-keyframes flash {
+  0% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes flash {
+  0% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.bg-dark .container-fluid {
+  margin-bottom: 25px;
+  margin-top: 25px;
+}
+.bg-dark .container-fluid a:hover {
+  background: black;
+  border-radius: 5px;
+  color: white;
+  transition: box-shadow 0.3s;
+}
+
+.logo_header {
+  height: 85.5px;
+  width: 350px;
+}
+
+.navbar-collapse {
+  font-size: x-large;
+}
+
+menu {
+  margin-bottom: 2px;
+}
+menu ul {
+  font-size: 30px;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  text-transform: uppercase;
+  justify-content: center;
+  margin-top: 15%;
+  padding-bottom: 1%;
+}
+menu ul li {
+  display: inline-block;
+  padding: 10px;
+}
+
+.form-control {
+  width: 350px;
+}
+
+/*Texto de la página contacto*/
+.contacto {
+  margin-top: 5%;
+  margin-left: 1%;
+  font-family: "Montserrat", sans-serif;
+  font-size: 150%;
+  color: white;
+}
+
+.carousel {
+  position: relative;
+  margin-block: 150px;
+  margin-left: 150px;
+  margin-right: 150px;
+}
+
 @media only screen and (max-width: 700px) {
+  .list-inline-item img {
+    width: 75px;
+    height: 75px;
+  }
+
+  .carousel {
+    position: relative;
+    margin-block: 15%;
+    margin-left: 15%;
+    margin-right: 15%;
+  }
+
   .contenedorgrid {
     height: 100%;
     width: 100%;
@@ -194,6 +341,18 @@ ul {
     height: 100%;
     width: 100%;
     background-size: cover;
+  }
+
+  .list-inline-item img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .carousel {
+    position: relative;
+    margin-block: 15%;
+    margin-left: 15%;
+    margin-right: 15%;
   }
 
   .contenedorgrid {
